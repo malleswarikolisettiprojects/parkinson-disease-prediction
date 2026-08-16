@@ -109,7 +109,7 @@ parkinsons-disease-prediction/
 Clone the repository:
 
 ```bash
-git clone https://github.com/<username>/parkinsons-disease-prediction.git
+git clone https://github.com/malleswarikolisettiprojects/parkinson-disease-prediction.git
 ```
 
 Navigate to the project directory:
@@ -122,6 +122,14 @@ Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Set up environment variables:
+
+```bash
+# Copy the example file
+cp .env.example .env
+# Then edit .env and set FLASK_SECRET_KEY to a strong random string
 ```
 
 ## Run the Application
