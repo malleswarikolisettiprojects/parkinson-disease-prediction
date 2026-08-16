@@ -12,6 +12,12 @@ app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'dev-secret-key-change-in-pr
 model = pickle.load(open('model1.pkl', 'rb'))
 
 
+@app.context_processor
+def inject_maps_key():
+    """Inject Google Maps API key into all templates automatically."""
+    return dict(maps_api_key=os.environ.get('GOOGLE_MAPS_API_KEY', ''))
+
+
 @app.errorhandler(404)
 def pageNotFound(e):
     return render_template('404.html'), 404
